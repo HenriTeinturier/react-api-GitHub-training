@@ -139,6 +139,10 @@ function GitHubApi() {
                 element={<Navigate to="GitHub" />}
               />
               <Route
+                path="Apollo/S09-React/react-api-GitHub-training/dist/"
+                element={<Navigate to="GitHub" />}
+              />
+              <Route
                 path="/"
                 element={<Navigate to="GitHub" />}
               />
