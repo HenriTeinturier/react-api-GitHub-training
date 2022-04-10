@@ -117,7 +117,7 @@ function GitHubApi() {
               {//* ******** Route accueil "/"  *************}
               }
               <Route
-                path="GitHub"
+                path="/GitHub"
                 element={(
                   <>
                     <SearchResult
@@ -136,19 +136,19 @@ function GitHubApi() {
               />
               <Route
                 path="react-api-GitHub-training/"
-                element={<Navigate to="GitHub" />}
+                element={<Navigate to="/GitHub" />}
               />
               <Route
                 path="Apollo/S09-React/react-api-GitHub-training/dist/"
-                element={<Navigate to="GitHub" />}
+                element={<Navigate to="/GitHub" />}
               />
               <Route
                 path="/"
-                element={<Navigate to="GitHub" />}
+                element={<Navigate to="/GitHub" />}
               />
               <Route
-                path="../"
-                element={<Navigate to="GitHub" />}
+                path="react-api-GitHub-training/GitHub"
+                element={<Navigate to="/GitHub" />}
               />
               <Route path="*" element={(<E404 />)} />
             </Routes>
