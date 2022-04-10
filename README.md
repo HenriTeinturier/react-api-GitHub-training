@@ -8,12 +8,13 @@ Training from scratch. From my React specialization with the O'Clock school.
 * Axios for connecting API
 * Semantic-UI Framework CSS
 * react-router-dom: navbar/navigate/routes/route/...
-* Varius React: proptypes, spinner, controlled element, ... 
+* Varius React: proptypes, controlled element, ... 
 
 ## developed features:
 
 * Various sorting for research
 * selection of the number of elements displayed
+* spinner with onload State
 * search bar
 * modal window
 * paging
