@@ -20,6 +20,8 @@ Training from scratch. From my React specialization with the O'Clock school.
 * paging
 * of course no reloading
 
+Lien vers le résultat final : [ICI](https://henriteinturier.github.io/react-api-GitHub-training/)
+
 |        Apperçu        |
 | :-------------------: |
 | ![résultat](src/assets/images/preview.png) |
