@@ -1,0 +1,30 @@
+.cards {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &-item {
+    margin-bottom: 2em;
+  }
+}
+
+.card {
+  min-height: 430px;
+  height: 430px;
+  max-height: 480px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.card:hover {
+  cursor: pointer;
+  box-shadow: 3px 3px 3px darkgrey;
+  border: darkgrey solid 1px;
+}
+
+
+
+
+

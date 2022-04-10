@@ -1,0 +1,11 @@
+@use 'src/styles/vars';
+
+.container {
+  background-color: vars.$MainColor;
+  min-height: 100vh;  
+}
+
+body {
+  font-family: sans-serif;
+  background-color: vars.$AlternativeColor;
+}
