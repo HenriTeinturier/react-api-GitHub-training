@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import CardItem from 'src/components/CardItem';
-import PaginationGitResult from 'src/components/Pagination';
+import PaginationGitResult from '../Pagination';
 import './cardslist.scss';
 
 function CardsList({
