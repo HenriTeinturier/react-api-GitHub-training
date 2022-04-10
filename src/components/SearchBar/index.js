@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import './searchbar.scss';
-import { Input, Menu, Form, Select } from 'semantic-ui-react';
+import { Input, Menu, Select } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
 
 function SearchBar({
@@ -37,27 +37,27 @@ function SearchBar({
             <>
               {/* <Menu.Menu> */}
               {/* <Menu.Item> */}
-              <div className="divInput">
+              <form
+                className="divInput"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  console.log(searchContent);
+                  setActuelPage(1);
+                  setSearchValue(searchContent);
+                  setSearchContent('');
+                }}
+              >
                 <Input
                   type="text"
                   value={searchContent}
-                  onSubmit={(e) => console.log(e,'submit')}
                   onChange={(e) => setSearchContent(e.currentTarget.value)}
                   // icon="search"
                   action={{
                     icon: 'search',
-                    onClick: () => {
-                      console.log(actualPage);
-                      setActuelPage(1);
-                      console.log(actualPage);
-                      setSearchValue(searchContent);
-                      setSearchContent('');
-                    },
                   }}
-                  // input={{ icon: 'search', iconPosition: 'right' }}
                   placeholder="Search..."
                 />
-              </div>
+              </form>
               {/* </Menu.Item> */}
               {/* </Menu.Menu> */}
               {/* <Form>
