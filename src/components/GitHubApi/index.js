@@ -135,6 +135,10 @@ function GitHubApi() {
                   )}
               />
               <Route
+                path="react-api-GitHub-training/"
+                element={<Navigate to="GitHub" />}
+              />
+              <Route
                 path="/"
                 element={<Navigate to="GitHub" />}
               />
