@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import './searchbar.scss';
-import { Input, Menu, Form } from 'semantic-ui-react';
+import { Input, Menu, Form, Select } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
 
 function SearchBar({
@@ -35,69 +35,74 @@ function SearchBar({
           (activeItem === 'home')
           && (
             <>
-              <Menu.Menu>
-                <Menu.Item>
-                  <Input
-                    type="text"
-                    value={searchContent}
-                    onChange={(e) => setSearchContent(e.currentTarget.value)}
-                    // icon="search"
-                    action={{
-                      icon: 'search',
-                      onClick: () => {
-                        console.log(actualPage);
-                        setActuelPage(1);
-                        console.log(actualPage);
-                        setSearchValue(searchContent);
-                        setSearchContent('');
-                      },
-                    }}
-                    // input={{ icon: 'search', iconPosition: 'right' }}
-                    placeholder="Search..."
-                  />
-                </Menu.Item>
-              </Menu.Menu>
-              <Form>
+              {/* <Menu.Menu> */}
+              {/* <Menu.Item> */}
+              <div className="divInput">
+                <Input
+                  type="text"
+                  value={searchContent}
+                  onSubmit={(e) => console.log(e,'submit')}
+                  onChange={(e) => setSearchContent(e.currentTarget.value)}
+                  // icon="search"
+                  action={{
+                    icon: 'search',
+                    onClick: () => {
+                      console.log(actualPage);
+                      setActuelPage(1);
+                      console.log(actualPage);
+                      setSearchValue(searchContent);
+                      setSearchContent('');
+                    },
+                  }}
+                  // input={{ icon: 'search', iconPosition: 'right' }}
+                  placeholder="Search..."
+                />
+              </div>
+              {/* </Menu.Item> */}
+              {/* </Menu.Menu> */}
+              {/* <Form>
                 <Form.Group
                   className="formulairetri"
                   // widths="equal"
-                >
-                  <Form.Select
-                    fluid
-                    // label="Tri"
-                    options={[
-                      { text: 'Note', value: 'stars' },
-                      { text: 'Maj', value: 'updated' },
-                      { text: 'Abonnés', value: 'followers' },
-                    ]}
-                    onChange={(e, { value }) => {setSortCardsBy(value); console.log(e);}}
-                    placeholder="Note"
-                  />
-                  <Form.Select
-                    fluid
-                    // label="Nbre résultat"
-                    options={[
-                      { text: 'desc', value: 'desc' },
-                      { text: 'asc', value: 'asc' },
-                    ]}
-                    onChange={(e, { value }) => setOrderedCardsBy(value)}
-                    placeholder="desc"
-                  />
-                  <Form.Select
-                    fluid
-                    // label="Nbre résultat"
-                    options={[
-                      { text: 3, value: 3 },
-                      { text: 6, value: 6 },
-                      { text: 9, value: 9 },
-                      { text: 12, value: 12 },
-                      { text: 20, value: 20 },
-                    ]}
-                    onChange={(e, { value }) => setNbrCardsByPage(value)}
-                    placeholder="6"
-                  />
-                </Form.Group>
-              </Form>
+                > */}
+              <div className="selects">
+                <Select
+                  fluid
+                  // label="Tri"
+                  options={[
+                    { text: 'Note', value: 'stars' },
+                    { text: 'Maj', value: 'updated' },
+                    { text: 'Abonnés', value: 'followers' },
+                  ]}
+                  onChange={(e, { value }) => {setSortCardsBy(value); console.log(e);}}
+                  placeholder="Note"
+                />
+                <Select
+                  fluid
+                  // label="Nbre résultat"
+                  options={[
+                    { text: 'desc', value: 'desc' },
+                    { text: 'asc', value: 'asc' },
+                  ]}
+                  onChange={(e, { value }) => setOrderedCardsBy(value)}
+                  placeholder="desc"
+                />
+                <Select
+                  fluid
+                  // label="Nbre résultat"
+                  options={[
+                    { text: 3, value: 3 },
+                    { text: 6, value: 6 },
+                    { text: 9, value: 9 },
+                    { text: 12, value: 12 },
+                    { text: 20, value: 20 },
+                  ]}
+                  onChange={(e, { value }) => setNbrCardsByPage(value)}
+                  placeholder="6"
+                />
+              </div>
+                {/* </Form.Group>
+              </Form> */}
             </>
 
           )

@@ -24,7 +24,28 @@
   border: darkgrey solid 1px;
 }
 
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .cards {
+    justify-content: space-around;  
+    
+  }
+}
 
+@media only screen and (max-width: 767px){
+  .cards {
+    justify-content: center; 
+    flex-wrap: wrap;
+    
+
+    &.item {
+      display: flex;
+      justify-content: center;
+    }
+
+  }
+
+
+}
 
 
 

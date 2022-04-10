@@ -1,35 +1,84 @@
-.searchbar {
-  width: 90%;
-  margin: 0 auto;
-  margin-bottom: 1em;
+  //div qui englobe searchbar
+  .searchbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1em; 
+  }
+  //search bar
+  .ui.menu {
+    width: 90%;
+    min-height: 90px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media only screen and (max-width: 991px) {
+    .ui.menu {
+      width: 90%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+  }
+
+  // element actif barre de recherche (home ou FAQ)
+  .ui.menu .active.item {
+  }
+  // element home ou faq 
+  .ui.menu .item {
+    display: flex;
+    min-width: 100px;
+    width: auto;
+    font-size: 1.3em;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  // .divInput englobant le search
+  .divInput {
+    padding: 1em 1em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  // div englobant les selects
+  .selects {
+    padding: 1em 1em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  // select
+  .ui.selection.dropdown {
+    display: flex;
+    margin-right: 8px;
+  }
+
+
+
+  // .ui.menu .menu {
+  //   width: 200px;
+  // }
   
   
-}
-
-.ui.inverted.menu {
-  height: 90px;
-}
-
-.ui.menu {
-  height: 90px;
-}
-
-.Item {
-  width: 100px;
-}
-
-.searchbar-element {
-  font-size: 1.3em;
-  width: 90px;
-}
-
-.form {
-  // width: 30%;
-  margin-left: 30px;
-  margin-top: 25px;
-  // margin: 0 auto;
-}
-
-.ui.form {
-    position: static;
-}
+  // .form {
+  //   // width: 30%;
+  //   margin-left: 30px;
+  //   margin-top: 25px;
+  //   // margin: 0 auto;
+  // }
+  // .ui.form {
+  //   position: static;
+  // }
+  // }
+  
+  // .searchbar-element {
+    
+    // width:  200px;
+  // }
+  
+  // .ui.inverted.menu {
+  //   height: 90px;
+  // }
