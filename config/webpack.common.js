@@ -11,13 +11,13 @@ const dotenv = require('dotenv-flow').config( {
 module.exports = {
   entry: [
     // SCSS
-    paths.src + './styles/index.scss',
+    paths.src + '/styles/index.scss',
     // JS
-    paths.src + './index.js',
+    paths.src + '/index.js',
   ],
   output: {
     path: paths.build,
-    publicPath: '/',
+    publicPath: './',
     filename: 'js/[name].[contenthash].js',
   },
   resolve: {
