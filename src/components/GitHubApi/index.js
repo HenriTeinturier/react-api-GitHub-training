@@ -143,7 +143,11 @@ function GitHubApi() {
                 element={<Navigate to="/GitHub" />}
               />
               <Route
-                path="/"
+                path="https://henriteinturier.github.io/react-api-GitHub-training/GitHub"
+                element={<Navigate to="/GitHub" />}
+              />
+              <Route
+                path="henriteinturier.github.io/react-api-GitHub-training/GitHub"
                 element={<Navigate to="/GitHub" />}
               />
               <Route
