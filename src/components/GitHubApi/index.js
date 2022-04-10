@@ -146,6 +146,10 @@ function GitHubApi() {
                 path="/"
                 element={<Navigate to="GitHub" />}
               />
+              <Route
+                path="../"
+                element={<Navigate to="GitHub" />}
+              />
               <Route path="*" element={(<E404 />)} />
             </Routes>
           )
